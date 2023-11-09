@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1377</width>
+    <height>1739</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Medvedev Tetris</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="tetrisresources.qrc">
+    <normaloff>:/myImages/Images/Tetris.png</normaloff>:/myImages/Images/Tetris.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <property name="spacing">
+     <number>40</number>
+    </property>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="spacing">
+       <number>30</number>
+      </property>
+      <property name="leftMargin">
+       <number>20</number>
+      </property>
+      <property name="topMargin">
+       <number>20</number>
+      </property>
+      <property name="rightMargin">
+       <number>20</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <spacer name="horizontalSpacer_4">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Minimum</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QLabel" name="NextFigureLabel">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Next figure</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="NextFigure" name="NextFigureWidget" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>150</width>
+            <height>0</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Expanding</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>228</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Minimum</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="Glass" name="GlassWidget" native="true">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>1</horstretch>
+          <verstretch>1</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::StrongFocus</enum>
+        </property>
+        <property name="Rows" stdset="0">
+         <UInt>20</UInt>
+        </property>
+        <property name="Columns" stdset="0">
+         <UInt>10</UInt>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Minimum</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QPushButton" name="NewGameButton">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="text">
+           <string>New Game</string>
+          </property>
+          <property name="icon">
+           <iconset resource="tetrisresources.qrc">
+            <normaloff>:/myImages/Images/iconNewGame.ico</normaloff>:/myImages/Images/iconNewGame.ico</iconset>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="PauseButton">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Pause</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="ExitButton">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Exit</string>
+          </property>
+          <property name="icon">
+           <iconset resource="tetrisresources.qrc">
+            <normaloff>:/myImages/Images/iconExit.ico</normaloff>:/myImages/Images/iconExit.ico</iconset>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="ScoreLabel">
+          <property name="text">
+           <string>Score</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLCDNumber" name="ScoreLCDNumber">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>80</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>MS Shell Dlg 2</family>
+            <pointsize>18</pointsize>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 18pt &quot;MS Shell Dlg 2&quot;;</string>
+          </property>
+          <property name="value" stdset="0">
+           <double>0.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_5">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Minimum</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1377</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_Main">
+    <property name="title">
+     <string>&amp;Menu</string>
+    </property>
+    <addaction name="actionNew_Game"/>
+    <addaction name="actionExit"/>
+    <addaction name="actionRules"/>
+   </widget>
+   <addaction name="menu_Main"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionExit">
+   <property name="icon">
+    <iconset resource="tetrisresources.qrc">
+     <normaloff>:/myImages/Images/iconExit.ico</normaloff>:/myImages/Images/iconExit.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionNew_Game">
+   <property name="icon">
+    <iconset resource="tetrisresources.qrc">
+     <normaloff>:/myImages/Images/iconNewGame.ico</normaloff>:/myImages/Images/iconNewGame.ico</iconset>
+   </property>
+   <property name="text">
+    <string>New Game</string>
+   </property>
+  </action>
+  <action name="actionRules">
+   <property name="icon">
+    <iconset resource="tetrisresources.qrc">
+     <normaloff>:/myImages/Images/iconInfo.ico</normaloff>:/myImages/Images/iconInfo.ico</iconset>
+   </property>
+   <property name="text">
+    <string> Rules and Keys</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>Glass</class>
+   <extends>QWidget</extends>
+   <header>glass.h</header>
+   <container>1</container>
+   <slots>
+    <signal>DrawNextFigureSignal(Figure*)</signal>
+    <signal>SetScore(int)</signal>
+    <signal>SetLevel(QString)</signal>
+    <signal>ChangePauseButtonTextSignal(bool)</signal>
+    <slot>NewGameSlot()</slot>
+    <slot>PausedSlot()</slot>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>NextFigure</class>
+   <extends>QWidget</extends>
+   <header>nextfigure.h</header>
+   <container>1</container>
+   <slots>
+    <slot>RenewNextFigureSlot(Figure*)</slot>
+   </slots>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="tetrisresources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>ExitButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>840</x>
+     <y>118</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>327</x>
+     <y>370</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>NewGameButton</sender>
+   <signal>clicked()</signal>
+   <receiver>GlassWidget</receiver>
+   <slot>NewGameSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>840</x>
+     <y>72</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>344</x>
+     <y>177</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>PauseButton</sender>
+   <signal>clicked()</signal>
+   <receiver>GlassWidget</receiver>
+   <slot>PausedSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>840</x>
+     <y>95</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>350</x>
+     <y>132</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>GlassWidget</sender>
+   <signal>SetLevel(QString)</signal>
+   <receiver>statusBar</receiver>
+   <slot>showMessage(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>327</x>
+     <y>366</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>327</x>
+     <y>999</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>GlassWidget</sender>
+   <signal>SetScore(int)</signal>
+   <receiver>ScoreLCDNumber</receiver>
+   <slot>display(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>376</x>
+     <y>409</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>840</x>
+     <y>593</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>GlassWidget</sender>
+   <signal>DrawNextFigureSignal(Figure*)</signal>
+   <receiver>NextFigureWidget</receiver>
+   <slot>RenewNextFigureSlot(Figure*)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>325</x>
+     <y>302</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>65</x>
+     <y>344</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>GlassWidget</sender>
+   <signal>ChangePauseButtonTextSignal(bool)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>ChangePauseButtonTextSlot(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>661</x>
+     <y>280</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>761</x>
+     <y>286</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>ChangePauseButtonTextSlot(bool)</slot>
+ </slots>
+</ui>
